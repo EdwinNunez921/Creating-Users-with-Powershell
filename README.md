@@ -80,7 +80,7 @@ When prompted, click OK to confirm and run the script.
 <h2>Step 3: Verify User Creation in Active Directory</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/ba51d7b6-eedf-4205-8453-d5922540c912" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Open Active Directory Users and Computers on DC-1.
@@ -92,5 +92,27 @@ Right-click the _EMPLOYEES Organizational Unit.
 Click Refresh from the context menu.
 
 Confirm that the newly created users are visible within the _EMPLOYEES Organizational Unit.
+</p>
+<br />
+
+<h2>Step 4: Test a User Account by Logging into Client-1</h2>
+
+<p>
+<img src="https://github.com/user-attachments/assets/e62873b0-32e2-40bb-b14e-1b99384c4ad9" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+In Active Directory Users and Computers on DC-1, select a random user from the _EMPLOYEES Organizational Unit.
+
+Note the user's credentials:
+
+Username: The username of the selected user.
+Password: Password1 (default for all users).
+Log in to Client-1 using the selected user's credentials.
+
+Once logged in, click the Search bar in the lower-left corner of the screen.
+
+Type Command Prompt and open it.
+
+Verify that the user shown in the Command Prompt is the account you logged in as.
 </p>
 <br />
