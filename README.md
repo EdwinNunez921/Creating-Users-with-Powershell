@@ -19,26 +19,78 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Deployment and Configuration Steps</h2>
 
+<h2>Step 1: Enable Remote Desktop Access for Domain Users</h2>
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/30f302a8-289c-4aeb-bdb7-72f813332d3b" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Log in to Client-1 as mydomain.com\jane_admin.
+
+Right-click the Windows icon in the lower-left corner and select System.
+
+In the System window, click About.
+
+Select Remote Desktop from the options.
+
+Click Select users that can remotely access this PC.
+
+In the new window, click Add.
+
+Enter Domain Users in the field.
+
+Click Check Names to verify the entry.
+
+Click OK, then click OK again to finalize.
 </p>
 <br />
+
+<h2>Step 2: Run a PowerShell Script to Create Users</h2>
+
+<p>
+<img src="https://github.com/user-attachments/assets/0787938f-ea00-47a7-8160-eef862bdb7fc" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Log in to DC-1 as mydomain.com\jane_admin.
+
+Use the Search bar at the bottom to search for Windows PowerShell ISE.
+
+Right-click Windows PowerShell ISE and select Run as Administrator.
+
+In PowerShell ISE, click the New File icon (the first page icon in the upper-left corner).
+
+Open the following link in your browser:
+GitHub - Generate-Names-Create-Users.ps1
+
+Copy the entire script from the GitHub page.
+
+Return to PowerShell ISE on DC-1 and paste the copied script into the new file.
+
+Save the file by pressing Ctrl + S.
+
+Name the file create-users.ps1, then click Save.
+
+Click the Green Triangle in PowerShell ISE to execute the script.
+
+When prompted, click OK to confirm and run the script.
+</p>
+<br />
+
+
+<h2>Step 3: Verify User Creation in Active Directory</h2>
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+Open Active Directory Users and Computers on DC-1.
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Expand mydomain.com in the left-hand menu.
+
+Right-click the _EMPLOYEES Organizational Unit.
+
+Click Refresh from the context menu.
+
+Confirm that the newly created users are visible within the _EMPLOYEES Organizational Unit.
 </p>
 <br />
