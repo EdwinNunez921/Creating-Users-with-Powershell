@@ -8,7 +8,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Video Demonstration</h2>
 
-- ### [YouTube: Creating-Users-with-Powershell](https://youtu.be/XhEehgzrvAQ)
+- ### [YouTube: Creating-Users-with-Powershell](https://youtu.be/Vm1ovwwgfG8)
   
 <h2>Environments and Technologies Used</h2>
 
