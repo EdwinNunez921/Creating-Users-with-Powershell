@@ -5,6 +5,11 @@
 <h1>Creating Users with Powershell  (Azure)</h1>
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
+
+<h2>Video Demonstration</h2>
+
+- ### [YouTube: Creating-Users-with-Powershell](https://youtu.be/XhEehgzrvAQ)
+  
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
